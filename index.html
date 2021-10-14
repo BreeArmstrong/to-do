@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- Font Awesome Icon -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+
+    <!-- index.css file -->
+    <link rel="stylesheet" href="./css/index.css">
+
+    <title>To-do List</title>
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-secondary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">To-do List</a>
+        <ul class="nav">
+            <li class="nav-item">
+              <a class="nav-link" href="https://breearmstrong.github.io/my-portfolio/">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://github.com/BreeArmstrong">Github</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://github.com/BreeArmstrong/to-do">Code</a>
+            </li>
+          </ul>
+        </div>
+    </nav>
+    <div class="card main-card">
+        <div class="card-header" style="background-color: white;">
+            <i class="far fa-check-square"></i>
+            Bree's To-do List
+        </div>
+        <div class="container">
+            <div class="row my-5">
+                <div class="col-md-8 mx-auto">
+                    <div class="card form-card">
+                        <div class="card-body">
+                            <form id="form-task">
+                                <div class="form-group mb-3">
+                                    <input type="text" id="title" maxlength="50" class="form-control" placeholder="To Do Item" required>
+                                </div>
+                                <div class="form-group mb-3">
+                                    <textarea id="description" cols="40" rows="5" maxlength="500" class="form-control" placeholder="To Do Description" required></textarea>
+                                </div>
+                                <div class="col-12 mx-auto d-grid">
+                                    <button type="submit" class="btn btn-outline-secondary btn-block">Save</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card secondary-card" style="background-color: rgba(252, 205, 238, 0.1); border-radius: 10px;">
+                <div class="card-body">
+                    <div class="col-md-10 mx-auto">
+                        <div class="row">
+                            <div class="col-sm-3 text-start">
+                                <p><strong>Title</strong></p>
+                            </div>
+                            <div class="col-sm-6 text-start">
+                                <p><strong>Description</strong></p>
+                            </div>
+                            <div class="col-sm-3">
+                                <p class="text-end" style="padding-right: 25px;"><strong>Action</strong></p>
+                            </div>
+                        </div>
+                        <hr>
+                        <div id="tasks"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/app.js"></script>
+</body>
+</html>
+
+<!-- This project will use HTML, Bootstrap and JS -->

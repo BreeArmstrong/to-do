@@ -1,0 +1,51 @@
+body .card, hr {
+    border-radius: 10px;
+    border: solid 1px rgb(247, 113, 191);
+
+}
+
+.nav-link {
+    color: #fff;
+}
+
+.nav-link:hover{
+    color: rgb(247, 113, 191);
+}
+
+input:focus{
+    box-shadow:red;
+}
+
+.form-card{
+    background-color: rgba(252, 205, 238, 0);
+}
+
+
+.main-card {
+    background-color: rgba(252, 205, 238, 0.4);
+    height: 95vh;
+}
+
+.secondary-card {
+    margin: 3rem 0;
+}
+
+#tasks {
+    overflow: scroll;
+    height: 43vh;
+    overflow-x: hidden;
+}
+
+#tasks::-webkit-scrollbar {
+    width: 12px;
+}
+
+#tasks::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgb(112, 112, 112); 
+    border-radius: 10px;
+}
+
+#tasks::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.7); 
+}
