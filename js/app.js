@@ -1,22 +1,30 @@
-document.getElementById('form-task').addEventListener('submit', saveTask);
+const saveButton = document.getElementById('form-task');
+saveButton.addEventListener('submit', saveTask);
+getTasks();
 
 //Build my function to save a task
 function saveTask(e){
-    let title = document.getElementById('title').value;
-    let description = document.getElementById('description').value;
+    e.preventDefault();
+    let todoTitle = document.getElementById('title').value;
+    let todoDesc = document.getElementById('description').value;
 
-    let task = {
-        title,
-        description
+    console.log(todoTitle)
+    console.log(todoDesc)
+
+    let newTask = {
+        title: todoTitle,
+        desc: todoDesc
     };
+
+    console.log(newTask)
 
     if(localStorage.getItem('tasks') === null){
         let tasks = [];
-        tasks.push(tasks);
+        tasks.push(newTask);
         localStorage.setItem('tasks', JSON.stringify(tasks));
     } else {
         let tasks = JSON.parse(localStorage.getItem('tasks'));
-        tasks.push(task);
+        tasks.push(newTask);
         localStorage.setItem('tasks', JSON.stringify(tasks));
     }
 
@@ -24,7 +32,7 @@ function saveTask(e){
 
     // Reset tasks
     document.getElementById('form-task').reset();
-    e.preventDefault();
+    
 }
 
 // Function to delete
@@ -48,7 +56,7 @@ function editTask(title){
     let tasks = JSON.parse(localStorage.getItem('tasks'));
     for(let i = 0; i < tasks.length; i++){
         if(tasks[i].title == title){
-            if (newDesc ? tasks[i].description = newDesc : "No description");
+            newDesc ? tasks[i].desc = newDesc : "No description";
         }
     }
 
@@ -65,7 +73,7 @@ function getTasks(){
     // Replace 'X' with trashcan
     for(let i = 0; i < tasks.length; i++) {
         let title = tasks[i].title;
-        let description = tasks[i].description;
+        let description = tasks[i].desc;
 
         tasksView.innerHTML += 
         `<div class="card mb-3">
@@ -87,4 +95,4 @@ function getTasks(){
     }
 }
 
-getTasks();
+// getTasks();
